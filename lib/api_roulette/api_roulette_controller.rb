@@ -4,7 +4,7 @@ require 'open-uri'
 PW_URL = "http://www.programmableweb.com"
 
 class APIRoulette
-  def self.get_random_api(quantity)
+  def self.get_random_api(quantity=1)
     @api_store = APIStore.new(APILoader.load_api_list)
     @api_store.get_random_api(quantity)
   end
