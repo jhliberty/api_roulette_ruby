@@ -9,7 +9,7 @@ class APIRoulette
     @api_store.get_random_api(quantity)
   end
 
-  def self.get_all_apis_on_page(page_number)
+  def self.get_all_apis_on_page(page_number=0)
     @api_store = APIStore.new(APILoader.load_api_list(page_number))
     @api_store.apis
   end
